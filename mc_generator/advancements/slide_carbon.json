@@ -1,0 +1,13 @@
+{
+	"criteria": {
+		"_": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "weapon_parts:slide_carbon"
+			}
+		}
+	},
+	"rewards": {
+		"function": "weapon_parts:give/slide_carbon"
+	}
+}

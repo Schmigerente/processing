@@ -1,0 +1,30 @@
+light: 1 | Damage (dealing)  : 0.0
+light: 1 | Damage (receiving): 25.0
+
+light: 2 | Damage (dealing)  : 0.0
+light: 2 | Damage (receiving): 25.0
+
+light: 3 | Damage (dealing)  : 0.0
+light: 3 | Damage (receiving): 25.0
+
+light: 4 | Damage (dealing)  : 0.0
+light: 4 | Damage (receiving): 25.0
+
+light: 5 | Damage (dealing)  : 0.0
+light: 5 | Damage (receiving): 1.0
+
+light: 6 | Damage (dealing)  : 0.0
+light: 6 | Damage (receiving): 1.0
+
+light: 7 | Damage (dealing)  : 0.0
+light: 7 | Damage (receiving): 1.0
+
+light: 8 | Damage (dealing)  : 0.0
+light: 8 | Damage (receiving): 1.0
+
+light: 9 | Damage (dealing)  : 1.0
+light: 9 | Damage (receiving): 1.0
+
+light: 10 | Damage (dealing)  : 1.0
+light: 10 | Damage (receiving): 0.75
+

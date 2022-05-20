@@ -1,0 +1,13 @@
+{
+	"criteria": {
+		"_": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "weapon_parts:sheet_metal"
+			}
+		}
+	},
+	"rewards": {
+		"function": "weapon_parts:give/sheet_metal"
+	}
+}

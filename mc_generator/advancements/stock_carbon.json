@@ -1,0 +1,13 @@
+{
+	"criteria": {
+		"_": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "weapon_parts:stock_carbon"
+			}
+		}
+	},
+	"rewards": {
+		"function": "weapon_parts:give/stock_carbon"
+	}
+}

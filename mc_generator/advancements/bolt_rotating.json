@@ -1,0 +1,13 @@
+{
+	"criteria": {
+		"_": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "weapon_parts:bolt_rotating"
+			}
+		}
+	},
+	"rewards": {
+		"function": "weapon_parts:give/bolt_rotating"
+	}
+}

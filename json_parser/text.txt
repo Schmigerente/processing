@@ -1,0 +1,3 @@
+wieviele Beine hat eine Fliege ?;Vier;5;Acht;6
+Was ist ein Bär ?;Fleisch;Brot;Uran;Kekse
+Wann endete der 2te Weltkrieg;1945;Zweitausend;1888;Noch nicht

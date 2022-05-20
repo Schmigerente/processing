@@ -1,0 +1,13 @@
+{
+	"criteria": {
+		"_": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "weapon_parts:chamber_556"
+			}
+		}
+	},
+	"rewards": {
+		"function": "weapon_parts:give/chamber_556"
+	}
+}

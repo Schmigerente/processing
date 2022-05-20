@@ -1,0 +1,13 @@
+{
+	"criteria": {
+		"_": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "weapon_parts:scope_red_dot"
+			}
+		}
+	},
+	"rewards": {
+		"function": "weapon_parts:give/scope_red_dot"
+	}
+}

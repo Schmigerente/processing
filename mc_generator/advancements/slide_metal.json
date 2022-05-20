@@ -1,0 +1,13 @@
+{
+	"criteria": {
+		"_": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "weapon_parts:slide_metal"
+			}
+		}
+	},
+	"rewards": {
+		"function": "weapon_parts:give/slide_metal"
+	}
+}

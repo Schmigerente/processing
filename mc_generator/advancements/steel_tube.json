@@ -1,0 +1,13 @@
+{
+	"criteria": {
+		"_": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "weapon_parts:steel_tube"
+			}
+		}
+	},
+	"rewards": {
+		"function": "weapon_parts:give/steel_tube"
+	}
+}

@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    sourceSets {
+       main.jni.srcDirs = []
+       main.jniLibs.srcDirs = ['libs']
+    }
+    compileSdkVersion @@target_sdk@@
+    defaultConfig {
+        applicationId "@@package_name@@"
+        minSdkVersion @@min_sdk@@
+        targetSdkVersion @@target_sdk@@
+        versionCode @@version_code@@
+        versionName "@@version_name@@"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }    
+    buildTypes {
+        debug {
+            debuggable true
+        }    
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    aaptOptions {
+        noCompress "tflite"
+        noCompress "lite"
+    }    
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:@@appcompat_version@@'
+    implementation 'com.google.vr:sdk-audio:@@gvr_version@@'
+    implementation 'com.google.vr:sdk-base:@@gvr_version@@'
+    implementation files('libs/processing-core.jar')
+    implementation files('libs/vr.jar')
+    androidTestImplementation 'com.android.support.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    testImplementation 'junit:junit:4.13'
+}

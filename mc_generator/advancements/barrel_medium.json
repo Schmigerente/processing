@@ -1,0 +1,13 @@
+{
+	"criteria": {
+		"_": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "weapon_parts:barrel_medium"
+			}
+		}
+	},
+	"rewards": {
+		"function": "weapon_parts:give/barrel_medium"
+	}
+}
