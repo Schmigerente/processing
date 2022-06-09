@@ -8,7 +8,7 @@ int segmentSize = 4;
 
 List<File> dirs;
 File directory;
-String directoryPath = "D:/Pictures/rename";
+String directoryPath = "D:/Pictures/library/saves";
 
 void setup() {
   
