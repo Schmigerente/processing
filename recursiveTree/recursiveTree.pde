@@ -1,9 +1,9 @@
-int depth = 11;
-int branches = 4;
-int minRotation = -40;
-int maxRotation = 40;
+int depth = 10;
+int branches = 2;
+int minRotation = -45;
+int maxRotation = 45;
 boolean starter = false;
-float scaling = 0.7;
+float scaling = 0.66;
 vector2d dir = new vector2d(0,180);
 vector2d start = new vector2d(0,-400);
 
