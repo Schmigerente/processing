@@ -4,14 +4,14 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.Path;
 
-public final String startDirectory = "D:";
+public final String startDirectory = "D:\\";
 Writer writer = new Writer();
 
 
 void setup() {
   File f = new File(startDirectory);
   list(f, 0);
-  writer.save("file system");
+  writer.save("file system2");
 }
 
 void list(File dir, int depth) {
@@ -66,7 +66,7 @@ class Writer {
   }
   
   void save(String name) {
-    PrintWriter result = createWriter(name + ".txt");
+    PrintWriter result = createWriter("data/" + name + ".txt");
     for (String s : buffer) {
       result.println(s);
     }
