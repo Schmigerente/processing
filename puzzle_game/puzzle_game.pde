@@ -3,23 +3,16 @@ import java.util.*;
 String[] files = {"tile_white.png", "tile_dark_blue.png", "tile_cyan.png", "tile_green.png", "tile_light_blue.png", "tile_light_red.png", "tile_lime.png", "tile_mint.png", "tile_orange.png", "tile_pink.png", "tile_purple.png", "tile_red.png", "tile_yellow.png", "tile_black.png", "tile_dark_grey.png", "tile_light_grey.png"};
 PImage[] images;
 Button[] grid;
+Modes modes = new Modes();
 
 void setup() {
     size(600, 600);
     background(0);
     
     loadResources();
-    
     grid = new Button[16];
-    for (int i = 0; i < grid.length; i++) {
-        grid[i] = new Button(4);
-        if(i%4 > 0) {
-            grid[i].link(grid[i-1]);
-        }
-        if(i/4 > 0) {
-            grid[i].link(grid[i-4]);
-        }
-    }
+    modes.base(grid);
+    
     
 }
 
@@ -49,9 +42,9 @@ class Button {
     private List<Button> linked;
     private int state;
     
-    public Button(int m) {
+    public Button(int m, boolean includeSelf) {
         linked = new LinkedList<Button>();
-        linked.add(this);
+        if(includeSelf) linked.add(this);
         this.maxStates = m;
     }
     
