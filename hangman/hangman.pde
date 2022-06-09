@@ -27,12 +27,14 @@ void setup () {
   frameRate(-1);
   size(450, 600);
   state = GameState.TITLE;
+  inputField = "";
   set();
 }
 
 void draw () {
 
-  simulateGuess();
+  //simulateGuess();
+  
 
   oscilate();
 
