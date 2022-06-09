@@ -1,10 +1,10 @@
-int MAX = 2000;
+int MAX = 6000;
 
 void setup() {
 
     String[] strings = new String[MAX];
     for (int i = 0; i < strings.length; i++) {
-        println(i / (MAX/100));
+        println(i / (MAX/100) + "%");
         for (int j = (int)random(MAX); j >= 0; j--) {
             strings[i] += randString(12) + ";";
         }
