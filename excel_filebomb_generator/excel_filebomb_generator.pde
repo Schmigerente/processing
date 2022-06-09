@@ -9,7 +9,7 @@ void setup() {
             strings[i] += randString(12) + ";";
         }
     }
-    saveStrings("table.csv", strings);
+    saveStrings("data/table.csv", strings);
     exit();
 }
 
