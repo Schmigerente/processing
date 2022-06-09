@@ -75,10 +75,10 @@ void keyPressed() {
         alg.step();
     }
     if (key == 'p') {
-        saveFrame("maze.png");
+        saveFrame("data/maze.png");
     }
     if (key == 't') {
-        saveStrings("maze.txt", mazeToString().split("1"));
+        saveStrings("data/maze.txt", mazeToString().split("1"));
     }
     if (key == 'a') {
         autoStepping = autoStepping ? false : true ;
