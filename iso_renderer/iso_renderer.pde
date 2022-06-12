@@ -1,105 +1,57 @@
 import java.util.*;
 
-public static int scale_x = 64, scale_y = 4, scale_z = 64;
+//holds a resourceLoader instance;
+public static ResourceLoader resourceLoader;
 
-boolean flag = true;
+int x_size = 256;
+int y_size = 128;
 
-PImage tile;
+PImage c1, c2;
 
-float scale = 0.7;
-
-int globalX = 0;
-int globalY = 0;
-
-int max = 20;
-
-Tile[][] tiles;
-
+/** Entry point for the program
+*   sets basic parameters like screen size and framerate
+*/
 void setup() {
-    frameRate(60);
-    size(800, 800);
-    tile = loadImage("tiles/tile_64.png");
-    tiles = new Tile[max][max];
-
-    loadTiles();
+    frameRate(-1);
+    size(1024, 1024);
+    
+    Chunk ch1 = new Chunk(0, 1);
+    Chunk ch2 = new Chunk(0, 0);
+    
+    ch1.setDefault();
+      
+    background(0);
+      
+    c1 = ch1.getChunkImage();
+  
+    ch2.loadFile();
+    
+    c2 = ch2.getChunkImage();
+    
 }
 
-void loadTiles() {
-    for (int i = 0; i < max; i++) {
-        for (int j = 0; j < max; j++) {
-            Tile t = new Tile(tile, i, (int)random(-4, 4), j);
-
-
-            tiles[i][j] = t;
-        }
-    }
-}
-
+/** Gets called every frame
+*   defines the game ticks
+*   //TODO decouple game ticks from render ticks
+*/  
 void draw () {
-
+    background(0);
+    pushMatrix();
+    imageMode(CENTER);
     translate(width/2, height/2);
-    scale(1, 1);
-    translate(globalX, globalY);
-    background(255);
+    
 
-    updateMouse();
-
-
-    for (int i = 0; i < max; i++) {
-        for (int j = 0; j < max; j++) {
-            tiles[i][j].render(0);
-        }
-    }
-
-    println(frameRate);
+    popMatrix();
+    textSize(20);
+    fill(255, 0, 0);
+    text((int)frameRate, 8, 20);
 }
 
-class Tile {
-
-    public int x, y, z;
-    private PImage image;
-
-    public Tile(PImage i, int x, int y, int z) {
-        this.image = i;
-        this.x = x;
-        this.y = y;
-        this.z = z;
-    }
-
-    public void render() {
-        render(0);
-    }
-
-    public void render(int offset_y) {
-        image(image, 0.5 * (scale_x * x - scale_z * z), 0.25 * (scale_x * x + scale_z * z - 2 * scale_y * y - scale_y * offset_y));
-    }
-}
-
-void keyPressed() {
-    switch(key) {
-    case 'v':
-        if (flag) {
-            flag = false;
-            tile = loadImage("tiles/tile_64_v.png");
-        } else {
-            flag = true;
-            tile = loadImage("tiles/tile_64.png");
-        }
-        loadTiles();
-        break;
-    }
-}
-
-void smooth() {
-}
-
-class Person {
-
-    //private final PImage[] charSheet;
-
-    public Person() {
-    }
-
-    void render() {
-    }
+/** returns the current resourceLoader instance and creates one if none is present
+*   @return ResourceLoader instance
+*/  
+public ResourceLoader getResourceLoaderInstance() {
+    if (resourceLoader == null)
+        resourceLoader = new ResourceLoader();
+    return resourceLoader;
 }
